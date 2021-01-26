@@ -1,0 +1,56 @@
+/* GLOBAL STYLES */
+body {
+    width: 1280px;
+    padding: 0 24px;
+    margin: 0 auto;
+    color: #000000;
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    font-size: 16px;
+}
+header > img {
+    height: 40px;
+}
+
+#search-bar {
+    height: 40px;
+    width: 300px;
+}
+
+header > p {
+}
+
+header > button {
+    height: 40px;
+    background-color: #000000;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 0 16px;
+}
+
+/* MAIN */
+h1 {
+    font-size: 54px;
+    line-height: 120%;
+}
+
+h1 span {
+    color: #fb5d5d;
+}
+
+#section-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-buttons > div {
+    border: 1px #000000 solid;
+    border-radius: 10px;
+    flex: 1;
+    padding: 16px;
+}
