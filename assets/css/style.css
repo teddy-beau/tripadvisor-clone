@@ -35,9 +35,7 @@ header {
     height: 60px;
     margin-bottom: 54px;
 }
-header > div {
-    height: 40px;
-}
+
 header > a > img {
     height: 40px;
     margin-right: 20px;
@@ -61,22 +59,25 @@ header > a > img {
     color: #000000;
 }
 /* Menu */
-header > a {
+.menu-item {
     font-weight: bold;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 10px;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 10px;
 }
-header > a:hover {
+.menu-item:hover {
+    transition: 0.5s ease;
     border: solid #000000 2px;
     border-radius: 10px;
     color: #333333;
     /* ci-dessus ne fonctionne pas */
 }
 
-header > a > i {
+.menu-item > i {
     margin-right: 8px;
     font-size: 18px;
     vertical-align: bottom;
@@ -92,6 +93,8 @@ header > button {
     font-weight: bold;
 }
 header > button:hover {
+    transition: 0.5s ease;
+
     opacity: 0.8;
 }
 
@@ -109,8 +112,6 @@ h1 > span {
 }
 
 nav {
-    /* display: flex;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 16px;
@@ -118,7 +119,6 @@ nav {
 }
 
 nav > a {
-    /* flex: 1; */
     border: 1px #000000 solid;
     font-weight: bold;
     text-decoration: none;
@@ -136,6 +136,10 @@ nav > a:hover {
 
 nav > a > i {
     font-size: 18px;
+}
+nav > a:hover > i {
+    color: #ffffff;
+    transition: 0.5s ease;
 }
 
 #hero {
@@ -155,6 +159,7 @@ nav > a > i {
     bottom: 10px;
     left: 10px;
     padding: 10px;
+    z-index: 999;
 }
 #more-pictures-button > i {
     font-size: 16px;
@@ -176,6 +181,7 @@ nav > a > i {
 }
 section img:hover {
     opacity: 0.9;
+    transition: 0.5s ease;
 }
 
 #hero-right {
@@ -273,6 +279,7 @@ section img:hover {
 }
 #intro-right > div > button:hover {
     background-color: #333333;
+    transition: 0.5s ease;
 }
 #intro-right > img {
     height: 180px;
@@ -314,4 +321,39 @@ footer > p {
     position: absolute;
     top: 50%;
     z-index: -1;
+}
+.show-more {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.show-more:hover {
+    color: #333333;
+    text-decoration: #333333 underline;
+}
+
+#tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+}
+.tip-item {
+    display: flex;
+    align-items: center;
+    border: solid 2px #e0e0e0;
+    border-radius: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 15px;
+}
+.tip-item:hover {
+    text-decoration: underline #000000;
+    border: solid 2px #000000;
+    transition: 0.5s ease;
+}
+.tip-img {
+    height: 80px;
+    margin: 0 5px;
 }
