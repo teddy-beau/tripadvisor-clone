@@ -7,40 +7,55 @@
 
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/font-face.css">
+        
+        <script src="https://kit.fontawesome.com/449fed2479.js" crossorigin="anonymous"></script>
     <body>
         <header>
             <img src="./assets/img/tripadvisor-logo.svg" alt="Tripadvisor logo" />
-            <input type="search" id="search-bar" placeholder="Type in your search..." />
-            <p>Publier</p>
-            <p>Alertes</p>
-            <p>Voyages</p>
+            <label id="search-bar" for="search-input"><i class="fas fa-search"></i><input type="search" id="search-input" placeholder="Type in your search..." /></label>
+            <p><i class="far fa-plus-square"></i>Publier</p>
+            <p><i class="far fa-bell"></i>Alertes</p>
+            <p><i class="far fa-heart"></i>Voyages</p>
             <button>Connectez-vous</button>
         </header>
         <main>
             <h1><span>Explorez</span> Paris</h1>
-            <div id="section-buttons">
+            <section id="section-buttons">
                 <div>
-                    <p>Conseils de voyage</p>
+                    <p>Conseils de voyage</p><i class="far fa-flag"></i>
                 </div>
                 <div>
-                    <p>Hôtels</p>
+                    <p>Hôtels</p><i class="fas fa-bed"></i>
                 </div>
                 <div>
-                    <p>Locations de vacances</p>
+                    <p>Locations de vacances</p><i class="fas fa-key"></i>
                 </div>
                 <div>
-                    <p>Activités</p>
+                    <p>Activités</p><i class="fas fa-ticket-alt"></i>
                 </div>
                 <div>
-                    <p>Restaurants</p>
+                    <p>Restaurants</p><i class="fas fa-utensils"></i>
                 </div>
                 <div>
-                    <p>Forums de voyages</p>
+                    <p>Forums de voyages</p><i class="far fa-comments"></i>
                 </div>
                 <div>
-                    <p>Plus</p>
+                    <p>Plus</p><i class="fas fa-ellipsis-h"></i>
                 </div>
-            </div>
+            </section>
+
+
+            <section id="pictures">
+                <div id="pictures-left">
+                    <button id="more-pictures-button"><i class="far fa-image"></i>Toutes les photos</button>
+                </div>
+                <div id="pictures-right">
+                    <div id="pictures-right-top"></div>
+                    <div id="pictures-right-bottom"></div>
+                </div>
+            </section>
+
         </main>
         <footer></footer>
     </body>
