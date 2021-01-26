@@ -1,18 +1,26 @@
 /* GLOBAL STYLES */
-body {
+header,
+main {
     width: 1280px;
     padding: 0 24px;
     margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+    font-size: 16px;
+    line-height: 20px;
     color: #000000;
     font-family: "Trip Sans", Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-p,
-button,
-input {
-    font-size: 16px;
 }
 
 /* HEADER */
@@ -163,4 +171,90 @@ h1 > span {
     background-position: center;
     border-radius: 0 0 10px 0;
     height: 215px;
+}
+
+#links-after-pictures {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+#links-after-pictures > p {
+    font-size: 12px;
+    color: #333333;
+}
+#links-after-pictures > p > a {
+    color: #333333;
+    text-decoration: none;
+}
+#links-after-pictures > p > a:hover {
+    color: #333333;
+    text-decoration: underline #333333;
+}
+#links-after-pictures > p > a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+/* Section intro */
+#intro {
+    display: flex;
+}
+#intro-left {
+    flex: 4;
+}
+
+#intro-left > h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+#intro-left > p {
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 24px;
+}
+#intro-right {
+    flex: 3;
+    background-color: #fb5d5d;
+    border-radius: 10px 10px 0 0;
+    padding: 34px;
+    margin-left: 110px;
+    /* height: 430px; */
+    position: relative;
+}
+#intro-right > h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+#intro-right > button {
+    height: 55px;
+    background-color: #000000;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 0 16px;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#intro-right > img {
+    position: absolute;
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+    top: 100%;
+    left: 0px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* FOOTER */
+footer {
+    height: 150px;
+    background-color: #faf1ed;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer > p {
+    font-size: 12px;
 }
