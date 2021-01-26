@@ -7,6 +7,8 @@ main {
 }
 
 p,
+a,
+div,
 h1,
 h2,
 h3,
@@ -14,7 +16,9 @@ h4,
 h5,
 h6,
 button,
-input {
+input,
+nav,
+i {
     font-size: 16px;
     line-height: 20px;
     color: #000000;
@@ -29,17 +33,21 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    margin-bottom: 34px;
+    margin-bottom: 54px;
 }
-header > img {
+header > div {
     height: 40px;
+}
+header > a > img {
+    height: 40px;
+    margin-right: 20px;
 }
 #search-bar {
     display: flex;
     align-items: center;
     height: 40px;
     width: 350px;
-    margin-right: 15%;
+    margin-right: 150px;
     border-radius: 10px;
     border: #e0e0e0 solid 2px;
 }
@@ -52,17 +60,28 @@ header > img {
     font-family: "Trip Sans", Arial, Helvetica, sans-serif;
     color: #000000;
 }
-
-header > p {
+/* Menu */
+header > a {
     font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+}
+header > a:hover {
+    border: solid #000000 2px;
+    border-radius: 10px;
+    color: #333333;
+    /* ci-dessus ne fonctionne pas */
 }
 
-header > p > i {
+header > a > i {
     margin-right: 8px;
     font-size: 18px;
     vertical-align: bottom;
 }
-
+/* Sign-in/Sign-up button */
 header > button {
     height: 40px;
     background-color: #000000;
@@ -72,6 +91,9 @@ header > button {
     border: none;
     font-weight: bold;
 }
+header > button:hover {
+    opacity: 0.8;
+}
 
 /* MAIN */
 
@@ -79,14 +101,14 @@ header > button {
 h1 {
     font-size: 54px;
     font-weight: bold;
-    margin-bottom: 26px;
+    margin-bottom: 42px;
 }
 
 h1 > span {
     color: #fb5d5d;
 }
 
-#section-buttons {
+nav {
     /* display: flex;
     justify-content: space-between; */
     display: grid;
@@ -95,27 +117,28 @@ h1 > span {
     margin-bottom: 24px;
 }
 
-#section-buttons > div {
+nav > a {
     /* flex: 1; */
     border: 1px #000000 solid;
+    font-weight: bold;
+    text-decoration: none;
     border-radius: 10px;
-    padding: 16px;
+    padding: 12px 18px;
     display: flex;
     justify-content: space-between;
 }
-/* #section-buttons > div:not(7) {
-    margin-right: 16px;
-} */
-
-#section > div > p {
-    font-weight: bold;
+nav > a:hover {
+    background-color: #000000;
+    transition: 0.5s ease;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-#section > div > i {
+nav > a > i {
     font-size: 18px;
 }
 
-#pictures {
+#hero {
     height: 430px;
     display: flex;
     margin-bottom: 18px;
@@ -136,53 +159,63 @@ h1 > span {
 #more-pictures-button > i {
     font-size: 16px;
     margin-right: 10px;
-    vertical-align: bottom;
+    vertical-align: middle;
+    color: #ffffff;
 }
 
-#pictures-left {
-    background-image: url("../img/paris1.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 0 0 10px;
+#hero-left {
+    flex: 5;
     height: 430px;
-    flex: 3;
     margin-right: 2px;
 }
+#left-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+section img:hover {
+    opacity: 0.9;
+}
 
-#pictures-right {
-    flex: 2;
+#hero-right {
+    flex: 3;
+    height: 430px;
     display: flex;
     flex-direction: column;
-    height: 430px;
 }
-
-#pictures-right-top {
-    background-image: url("../img/paris2.jpg");
-    background-size: cover;
-    background-position: center;
+#hero-right > div:first-child {
+    overflow: hidden;
     border-radius: 0 10px 0 0;
-    height: 215px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
+}
+#hero-right > div:last-child {
+    overflow: hidden;
+    border-radius: 0 0 10px 0;
+    margin-top: 1px;
 }
 
-#pictures-right-bottom {
-    background-image: url("../img/paris3.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 0 0 10px 0;
+#top-right-img {
+    width: 100%;
     height: 215px;
+    object-fit: cover;
+}
+
+#bottom-right-img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 #links-after-pictures {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
-#links-after-pictures > p {
+#links-after-pictures > p,
+#links-after-pictures > p > a,
+#links-after-pictures > p > i {
     font-size: 12px;
-    color: #333333;
-}
-#links-after-pictures > p > a {
     color: #333333;
     text-decoration: none;
 }
@@ -199,7 +232,7 @@ h1 > span {
     display: flex;
 }
 #intro-left {
-    flex: 4;
+    flex: 5;
 }
 
 #intro-left > h2 {
@@ -213,20 +246,22 @@ h1 > span {
     line-height: 24px;
 }
 #intro-right {
-    flex: 3;
+    flex: 4;
+    margin-left: 110px;
+}
+
+#intro-right > div {
     background-color: #fb5d5d;
     border-radius: 10px 10px 0 0;
-    padding: 34px;
-    margin-left: 110px;
-    /* height: 430px; */
-    position: relative;
+    padding: 30px;
 }
-#intro-right > h3 {
+
+#intro-right > div > h3 {
     font-size: 32px;
     font-weight: bold;
     margin: 10px 0 20px 0;
 }
-#intro-right > button {
+#intro-right > div > button {
     height: 55px;
     background-color: #000000;
     border-radius: 20px;
@@ -236,13 +271,13 @@ h1 > span {
     font-weight: bold;
     margin-top: 20px;
 }
+#intro-right > div > button:hover {
+    background-color: #333333;
+}
 #intro-right > img {
-    position: absolute;
     height: 180px;
     object-fit: cover;
     width: 100%;
-    top: 100%;
-    left: 0px;
     border-radius: 0 0 10px 10px;
 }
 
@@ -257,4 +292,26 @@ footer {
 }
 footer > p {
     font-size: 12px;
+}
+
+/* SECTIONS */
+.section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 85px 0 50px 0;
+    position: relative;
+}
+.section h2 span {
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+.section h2::before {
+    display: block;
+    content: "";
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
 }
