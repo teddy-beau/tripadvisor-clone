@@ -13,8 +13,8 @@ button:focus {
     outline: none;
 }
 .container {
-    width: 1280px;
-    /* width: 85%; Pour le responsive */
+    max-width: 1280px;
+    width: 85%;
     margin: 0 auto;
     /* border: solid 1px grey; */
     margin-bottom: 50px;
@@ -291,7 +291,7 @@ main #info-right img {
     border-bottom: 1px solid #000000;
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 55%;
     z-index: -1;
 }
 
@@ -350,16 +350,17 @@ main #info-right img {
 .slider-activities {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 44px;
 }
 /* Légende */
 .slider-legend {
     flex: 1;
-    margin-right: 30px;
 }
 .slider-legend h3 {
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    margin-right: 24px;
 }
 .slider-legend p {
     font-size: 18px;
@@ -367,6 +368,7 @@ main #info-right img {
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #333333;
     margin-bottom: 16px;
+    margin-right: 24px;
 }
 /* Cartes */
 .slider-cards {
@@ -380,7 +382,7 @@ main #info-right img {
 }
 .card {
     flex-shrink: 0;
-    width: 300px;
+    width: 306px;
     margin: 0 8px;
     /* border: 1px solid red; */
     color: #333333;
@@ -405,6 +407,7 @@ main #info-right img {
     justify-content: center;
     align-items: center;
     border: none;
+    cursor: pointer;
 }
 .card button i {
     font-size: 22px;
@@ -425,13 +428,58 @@ main #info-right img {
 
 /* FOOTER */
 footer {
-    height: 150px;
     background-color: #faf1ed;
     margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 36px 0;
 }
-footer > p {
+#footer-container {
+    max-width: 1280px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+footer img {
+    height: 40px;
+    margin-right: 20px;
+}
+footer p {
     font-size: 12px;
+    color: #333333;
+}
+
+#footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+#footer-left-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+#footer-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+#footer-links a {
+    color: #333333;
+    font-weight: 500;
+    margin-right: 10px;
+}
+#footer-right {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+}
+#footer-right input {
+    border-radius: 10px;
+    border: #e0e0e0 solid 2px;
+    color: #000000;
+    padding: 6px 12px;
+    margin-left: 16px;
+    font-family: inherit;
+    font-size: inherit;
 }
