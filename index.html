@@ -4,18 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tripadvisor - Explorez Paris</title>
-
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/font-face.css" />
-
         <script
             src="https://kit.fontawesome.com/449fed2479.js"
             crossorigin="anonymous"
         ></script>
     </head>
     <body>
-        <header>
+        <header class="container">
             <a href="#"
                 ><img
                     src="./assets/img/tripadvisor-logo.svg"
@@ -28,93 +26,69 @@
                     id="search-input"
                     placeholder="Type in your search..."
             /></label>
-            <a class="menu-item" href="#"
-                ><i class="far fa-plus-square"></i>
-                <p>Publier</p></a
-            >
-            <a class="menu-item" href="#"
-                ><i class="far fa-bell"></i>
-                <p>Alertes</p></a
-            >
-            <a class="menu-item" href="#"
-                ><i class="far fa-heart"></i>
-                <p>Voyages</p></a
-            >
-
-            <button>Connectez-vous</button>
+            <nav>
+                <a href="#"
+                    ><i class="far fa-plus-square"></i><span>Publier</span></a
+                >
+                <a href="#"><i class="far fa-bell"></i><span>Alertes</span></a>
+                <a href="#"><i class="far fa-heart"></i><span>Voyages</span></a>
+                <button>Connectez-vous</button>
+            </nav>
         </header>
-        <main>
+        <main class="container">
             <h1><span>Explorez</span> Paris</h1>
             <nav>
-                <a href="#">
-                    Conseils de voyage
-                    <i class="far fa-flag"></i>
-                </a>
-                <a href="#">
-                    Hôtels
-                    <i class="fas fa-bed"></i>
-                </a>
-                <a href="#">
-                    Locations de vacances
-                    <i class="fas fa-key"></i>
-                </a>
-                <a href="#">
-                    Activités
-                    <i class="fas fa-ticket-alt"></i>
-                </a>
-                <a href="#">Restaurants<i class="fas fa-utensils"></i></a>
-                <a href="#">Forums de voyages<i class="far fa-comments"></i></a>
-                <a href="#">
-                    Plus
-                    <i class="fas fa-ellipsis-h"></i>
-                </a>
+                <a href="#"
+                    ><span>Conseils de voyage</span><i class="far fa-flag"></i
+                ></a>
+                <a href="#"><span>Hôtels</span><i class="fas fa-bed"></i></a>
+                <a href="#"
+                    ><span>Locations de vacances</span><i class="fas fa-key"></i
+                ></a>
+                <a href="#"
+                    ><span>Activités</span><i class="fas fa-ticket-alt"></i
+                ></a>
+                <a href="#"
+                    ><span>Restaurants</span><i class="fas fa-utensils"></i
+                ></a>
+                <a href="#"
+                    ><span>Forums de voyage</span><i class="far fa-comments"></i
+                ></a>
+                <a href="#"
+                    ><span>Plus</span><i class="fas fa-ellipsis-h"></i
+                ></a>
             </nav>
-
-            <section id="hero">
+            <div id="img-preview">
                 <button id="more-pictures-button">
                     <i class="far fa-image"></i>Toutes les photos
                 </button>
-                <div id="hero-left">
+                <div id="img-left">
                     <a href="#"
-                        ><img
-                            id="left-img"
-                            src="./assets/img/paris1.jpg"
-                            alt="Rue de Paris"
+                        ><img src="./assets/img/paris1.jpg" alt="Rue de Paris"
                     /></a>
                 </div>
-                <div id="hero-right">
-                    <div>
-                        <a href="#"
-                            ><img
-                                id="top-right-img"
-                                src="./assets/img/paris2.jpg"
-                                alt="Paris en 2 roues"
-                        /></a>
-                    </div>
-                    <div>
-                        <a href="#"
-                            ><img
-                                id="bottom-right-img"
-                                src="./assets/img/paris3.jpg"
-                                alt="Tour Eiffel"
-                        /></a>
-                    </div>
+                <div id="img-right">
+                    <a href="#"
+                        ><img
+                            src="./assets/img/paris2.jpg"
+                            alt="Paris en 2 roues" /></a
+                    ><a href="#"
+                        ><img src="./assets/img/paris3.jpg" alt="Tour Eiffel"
+                    /></a>
                 </div>
-            </section>
-
-            <section id="links-after-pictures">
-                <p>
+            </div>
+            <div id="breadcrumbs">
+                <span>
                     <a href="#">Europe</a> > <a href="#">France</a> >
                     <a href="#">Île-de-France</a> >
                     <a href="#">Paris</a>&nbsp;&nbsp;<i
                         class="fas fa-caret-down"
                     ></i>
-                </p>
-                <p>Visiter : Paris</p>
-            </section>
-
-            <section id="intro">
-                <div id="intro-left">
+                </span>
+                <span>Visiter : Paris</span>
+            </div>
+            <div id="info-block">
+                <div id="info-left">
                     <h2>La Ville Lumière éblouit en tous points</h2>
                     <p>
                         Aucun autre endroit au monde ne fait autant rêver que
@@ -127,7 +101,7 @@
                         vous approprier Paris.
                     </p>
                 </div>
-                <div id="intro-right">
+                <div id="info-right">
                     <div>
                         <h3>Paris: commencez à organiser !</h3>
                         <p>
@@ -138,65 +112,182 @@
                     </div>
                     <img src="./assets/img/map.png" alt="Exemple de carte" />
                 </div>
-            </section>
+            </div>
+        </main>
 
-            <section class="section">
-                <h2><span>Conseils de voyage</span></h2>
-                <a class="show-more" href="#">Tout afficher</a>
-                <div id="tips">
-                    <a class="tip-item" href="#">
-                        <img
-                            class="tip-img"
-                            src="./assets/img/tip1.svg"
-                            alt="icônes des conseils"
-                        /><span>Meilleure période pour visiter</span>
+        <section class="container tips-section">
+            <h2><span>Conseils de voyage</span></h2>
+            <a class="show-more-right" href="#">Tout afficher</a>
+            <div id="travel-tips">
+                <a class="item" href="#">
+                    <img
+                        class="tip-img"
+                        src="./assets/img/tip1.svg"
+                        alt="icônes des conseils"
+                    /><span>Meilleure période pour visiter</span>
+                </a>
+                <a class="item" href="#">
+                    <img
+                        class="tip-img"
+                        src="./assets/img/tip2.svg"
+                        alt="icônes des conseils"
+                    /><span>Se déplacer</span>
+                </a>
+                <a class="item" href="#">
+                    <img
+                        class="tip-img"
+                        src="./assets/img/tip3.svg"
+                        alt="icônes des conseils"
+                    /><span>Coutumes locales</span>
+                </a>
+                <a class="item" href="#">
+                    <img
+                        class="tip-img"
+                        src="./assets/img/tip4.svg"
+                        alt="icônes des conseils"
+                    /><span>Conseils de pros</span>
+                </a>
+            </div>
+        </section>
+        <section class="container tips-section">
+            <h2><span>Immanquable à Paris</span></h2>
+            <div class="slider-activities">
+                <div class="slider-legend">
+                    <h3>Se divertir</h3>
+                    <p>
+                        Des lieux à voir, des rues à explorer et des expériences
+                        emblématiques à Paris.
+                    </p>
+                    <a href="#" class="show-more-left">Tout afficher</a>
+                </div>
+                <div class="slider-cards">
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-01.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+
+                        <h4>Tour Eiffel</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;140 237 avis</div>
+                        <div>
+                            Tours et plateformes d'observation, Monuments &
+                            Points d'intérêt
+                        </div>
                     </a>
-                    <a class="tip-item" href="#">
-                        <img
-                            class="tip-img"
-                            src="./assets/img/tip2.svg"
-                            alt="icônes des conseils"
-                        /><span>Se déplacer</span>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-02.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Musée du Louvre</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;100 857 avis</div>
+                        <div>Bâtiments architecturaux, Musées d'art</div>
                     </a>
-                    <a class="tip-item" href="#">
-                        <img
-                            class="tip-img"
-                            src="./assets/img/tip3.svg"
-                            alt="icônes des conseils"
-                        /><span>Coutumes locales</span>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-03.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Arc de Triomphe</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;45 094 avis</div>
+                        <div>Bâtiments architecturaux, Sites historiques</div>
                     </a>
-                    <a class="tip-item" href="#">
-                        <img
-                            class="tip-img"
-                            src="./assets/img/tip4.svg"
-                            alt="icônes des conseils"
-                        /><span>Conseils de pros</span>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-04.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Musée Rodin</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;12 452 avis</div>
+                        <div>Musées spécialisés</div>
+                    </a>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-05.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Cathédrale Notre-Dame de Paris</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;71 253 avis</div>
+                        <div>Bâtiments architecturaux, Sites historiques</div>
+                    </a>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-06.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Librairie Shakespeare and Company</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;3 921 avis</div>
+                        <div>Bibliothèques, Grands magasins</div>
+                    </a>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-07.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Musée d'Orsay</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;65 762 avis</div>
+                        <div>Musées d'art</div>
+                    </a>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-08.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Marché aux Puces de Saint-Ouen</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;864 avis</div>
+                        <div>
+                            Antiquaires, Marchés aux puces & Marchés de rue À
+                            5,4 kilomètres de Paris Saint-Ouen, France
+                        </div>
+                    </a>
+                    <a href="#" class="card">
+                        <div>
+                            <img
+                                src="/assets/img/divertir-09.jpg"
+                                alt="Se divertir à Paris"
+                            /><button><i class="far fa-heart"></i></button>
+                        </div>
+                        <h4>Basilique du Sacré-Cœur de Montmartre</h4>
+                        <div><span>☻☻☻☻☺︎</span>&nbsp;38 627 avis</div>
+                        <div>Églises et cathédrales</div>
                     </a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section">
-                <h2><span>Immanquable à Paris</span></h2>
-            </section>
+        <section class="container tips-section">
+            <h2><span>Guides des voyageurs</span></h2>
+        </section>
 
-            <section class="section">
-                <h2><span>Guides des voyageurs</span></h2>
-            </section>
+        <section class="container tips-section">
+            <h2><span>Dans les forums</span></h2>
+        </section>
 
-            <section class="section">
-                <h2><span>Dans les forums</span></h2>
-            </section>
+        <section class="container tips-section">
+            <h2>
+                <span>Louez un logement pour votre prochaine escapade</span>
+            </h2>
+        </section>
 
-            <section class="section">
-                <h2>
-                    <span>Louez un logement pour votre prochaine escapade</span>
-                </h2>
-            </section>
-
-            <section class="section">
-                <h2><span>Paris est géniale pour</span></h2>
-            </section>
-        </main>
+        <section class="container tips-section">
+            <h2><span>Paris est géniale pour</span></h2>
+        </section>
         <footer>
             <p>2021 - Teddy Beau</p>
         </footer>

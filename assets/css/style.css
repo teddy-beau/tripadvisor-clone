@@ -1,291 +1,426 @@
 /* GLOBAL STYLES */
-header,
-main {
-    width: 1280px;
-    padding: 0 24px;
-    margin: 0 auto;
-}
-
-p,
-a,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-input,
-nav,
-i {
-    font-size: 16px;
-    line-height: 20px;
+body {
     color: #000000;
     font-family: "Trip Sans", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+input:focus,
+button:focus {
+    outline: none;
+}
+.container {
+    width: 1280px;
+    /* width: 85%; Pour le responsive */
+    margin: 0 auto;
+    /* border: solid 1px grey; */
+    margin-bottom: 50px;
+}
+
 /* HEADER */
 header {
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    margin-bottom: 54px;
 }
 
-header > a > img {
+/* Logo */
+header img {
     height: 40px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
-#search-bar {
+
+/* Search bar */
+header #search-bar {
     display: flex;
     align-items: center;
     height: 40px;
     width: 350px;
-    margin-right: 150px;
+    margin-right: 200px;
     border-radius: 10px;
     border: #e0e0e0 solid 2px;
 }
-#search-bar > i {
+header #search-bar > i {
     margin: 0 10px;
     font-size: 18px;
 }
-#search-input {
+header #search-input {
     border: none;
-    font-family: "Trip Sans", Arial, Helvetica, sans-serif;
     color: #000000;
+    font-family: inherit;
+    font-size: inherit;
 }
-/* Menu */
-.menu-item {
-    font-weight: bold;
-    text-decoration: none;
+
+/* Nav */
+header nav {
+    flex: 1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+header nav a {
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
     padding: 8px 12px;
     border: 2px solid transparent;
     border-radius: 10px;
 }
-.menu-item:hover {
+header nav a:hover {
     transition: 0.5s ease;
     border: solid #000000 2px;
-    border-radius: 10px;
     color: #333333;
-    /* ci-dessus ne fonctionne pas */
 }
-
-.menu-item > i {
+header nav a > i {
     margin-right: 8px;
     font-size: 18px;
     vertical-align: bottom;
 }
-/* Sign-in/Sign-up button */
-header > button {
+/* Log-in button */
+header button {
     height: 40px;
     background-color: #000000;
     border-radius: 20px;
     color: #ffffff;
     padding: 0 16px;
     border: none;
-    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    cursor: pointer;
 }
-header > button:hover {
+header button:hover {
     transition: 0.5s ease;
-
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 /* MAIN */
-
-/* Menu section */
-h1 {
+main h1 {
+    font-weight: 900;
     font-size: 54px;
-    font-weight: bold;
     margin-bottom: 42px;
+    line-height: normal;
 }
-
-h1 > span {
+main h1 span {
     color: #fb5d5d;
 }
 
-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 16px;
-    margin-bottom: 24px;
+/* Nav */
+main nav {
+    display: flex;
+    margin-bottom: 26px;
 }
-
-nav > a {
-    border: 1px #000000 solid;
-    font-weight: bold;
+main nav a {
+    color: inherit;
     text-decoration: none;
+    font-weight: 500;
+    border: 1px #000000 solid;
     border-radius: 10px;
-    padding: 12px 18px;
+    flex: 1;
+    padding: 14px 18px;
     display: flex;
     justify-content: space-between;
 }
-nav > a:hover {
+main nav a:not(:last-child) {
+    margin-right: 16px;
+}
+main nav a:hover {
     background-color: #000000;
     transition: 0.5s ease;
     color: #ffffff;
     text-decoration: none;
 }
-
-nav > a > i {
+main nav a i {
     font-size: 18px;
 }
-nav > a:hover > i {
-    color: #ffffff;
-    transition: 0.5s ease;
-}
 
-#hero {
+/* Pictures */
+main #img-preview {
     height: 430px;
     display: flex;
-    margin-bottom: 18px;
+    border-radius: 10px;
     position: relative;
+    margin-bottom: 18px;
+}
+main #img-left {
+    height: 100%;
+    flex: 1;
+    margin-right: 4px;
+}
+main #img-left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+main #img-right {
+    height: 100%;
+    width: 38%;
+}
+main #img-right img {
+    height: calc(50% - 2px);
+    width: 100%;
+    object-fit: cover;
+}
+main #img-right img:first-child {
+    border-radius: 0 10px 0 0;
+}
+main #img-right img:last-child {
+    border-radius: 0 0 10px 0;
+}
+main a:hover {
+    opacity: 0.9;
 }
 
-#more-pictures-button {
+/* More pictures button */
+main #more-pictures-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 99;
     color: #ffffff;
     font-size: 12px;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 20px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
     padding: 10px;
-    z-index: 999;
+    cursor: pointer;
 }
-#more-pictures-button > i {
+main #more-pictures-button i {
     font-size: 16px;
     margin-right: 10px;
     vertical-align: middle;
     color: #ffffff;
 }
 
-#hero-left {
-    flex: 5;
-    height: 430px;
-    margin-right: 2px;
-}
-#left-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px 0 0 10px;
-}
-section img:hover {
-    opacity: 0.9;
-    transition: 0.5s ease;
-}
-
-#hero-right {
-    flex: 3;
-    height: 430px;
-    display: flex;
-    flex-direction: column;
-}
-#hero-right > div:first-child {
-    overflow: hidden;
-    border-radius: 0 10px 0 0;
-    margin-bottom: 1px;
-}
-#hero-right > div:last-child {
-    overflow: hidden;
-    border-radius: 0 0 10px 0;
-    margin-top: 1px;
-}
-
-#top-right-img {
-    width: 100%;
-    height: 215px;
-    object-fit: cover;
-}
-
-#bottom-right-img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-#links-after-pictures {
+/* Breadcrumb trail */
+main #breadcrumbs {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
-#links-after-pictures > p,
-#links-after-pictures > p > a,
-#links-after-pictures > p > i {
+main #breadcrumbs span,
+main #breadcrumbs a,
+main #breadcrumbs a:visited,
+main #breadcrumbs i {
     font-size: 12px;
     color: #333333;
     text-decoration: none;
 }
-#links-after-pictures > p > a:hover {
+main #breadcrumbs a:hover {
     color: #333333;
     text-decoration: underline #333333;
 }
-#links-after-pictures > p > a:visited {
-    color: #333333;
-    text-decoration: none;
-}
-/* Section intro */
-#intro {
+
+/* Information block */
+main #info-block {
     display: flex;
 }
-#intro-left {
+main #info-left {
     flex: 5;
 }
-
-#intro-left > h2 {
+main #info-left h2 {
     font-size: 32px;
-    font-weight: bold;
     margin-bottom: 18px;
+    font-weight: 900;
 }
-#intro-left > p {
+main #info-left p {
     font-size: 20px;
     font-family: Georgia, "Times New Roman", Times, serif;
     line-height: 24px;
+    color: #333333;
 }
-#intro-right {
+main #info-right {
     flex: 4;
-    margin-left: 110px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
 }
-
-#intro-right > div {
+main #info-right div:first-child {
     background-color: #fb5d5d;
     border-radius: 10px 10px 0 0;
     padding: 30px;
 }
-
-#intro-right > div > h3 {
+main #info-right h3 {
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 500;
     margin: 10px 0 20px 0;
 }
-#intro-right > div > button {
+main #info-right button {
     height: 55px;
     background-color: #000000;
     border-radius: 20px;
     color: #ffffff;
     padding: 0 16px;
     border: none;
-    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
     margin-top: 20px;
 }
-#intro-right > div > button:hover {
+main #info-right button:hover {
     background-color: #333333;
     transition: 0.5s ease;
 }
-#intro-right > img {
+main #info-right img {
+    border-radius: 0 0 10px 10px;
     height: 180px;
     object-fit: cover;
     width: 100%;
-    border-radius: 0 0 10px 10px;
+}
+
+/* SECTIONS */
+/* Titles */
+.tips-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin: 85px 0 50px 0;
+    position: relative;
+    font-weight: 900;
+}
+.tips-section h2 span {
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+.tips-section h2::before {
+    display: block;
+    content: "";
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+
+/* Show more link */
+.show-more-right {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: right;
+    margin-bottom: 20px;
+    color: inherit;
+}
+.show-more-left {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: left;
+    margin-bottom: 20px;
+    color: inherit;
+}
+.show-more-right:hover,
+.show-more-left:hover {
+    color: #333333;
+    text-decoration: #333333 underline;
+}
+
+/* Travel tips */
+#travel-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+}
+#travel-tips .item {
+    display: flex;
+    align-items: center;
+    border: solid 2px #e0e0e0;
+    border-radius: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 15px;
+}
+#travel-tips .item:hover {
+    text-decoration: underline #000000;
+    border: solid 2px #000000;
+    transition: 0.5s ease;
+}
+#travel-tips img {
+    height: 80px;
+    margin: 0 5px;
+}
+
+/* Se divertir */
+.slider-activities {
+    display: flex;
+    justify-content: space-between;
+}
+/* Légende */
+.slider-legend {
+    flex: 1;
+    margin-right: 30px;
+}
+.slider-legend h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.slider-legend p {
+    font-size: 18px;
+    line-height: normal;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #333333;
+    margin-bottom: 16px;
+}
+/* Cartes */
+.slider-cards {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    /* border: 1px solid green; */
+}
+.card {
+    flex-shrink: 0;
+    width: 300px;
+    margin: 0 8px;
+    /* border: 1px solid red; */
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.card button i {
+    font-size: 22px;
+    color: #000000;
+}
+.card h4 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.card h4:hover {
+    text-decoration: underline #333333;
+}
+.card span {
+    color: #21aa6c;
+    font-size: 18px;
 }
 
 /* FOOTER */
@@ -299,61 +434,4 @@ footer {
 }
 footer > p {
     font-size: 12px;
-}
-
-/* SECTIONS */
-.section h2 {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    margin: 85px 0 50px 0;
-    position: relative;
-}
-.section h2 span {
-    background-color: #ffffff;
-    padding: 0 15px;
-}
-.section h2::before {
-    display: block;
-    content: "";
-    border-bottom: 1px solid #000000;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    z-index: -1;
-}
-.show-more {
-    display: block;
-    font-size: 14px;
-    text-decoration: none;
-    text-align: right;
-    margin-bottom: 20px;
-}
-.show-more:hover {
-    color: #333333;
-    text-decoration: #333333 underline;
-}
-
-#tips {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 16px;
-}
-.tip-item {
-    display: flex;
-    align-items: center;
-    border: solid 2px #e0e0e0;
-    border-radius: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 0 15px;
-}
-.tip-item:hover {
-    text-decoration: underline #000000;
-    border: solid 2px #000000;
-    transition: 0.5s ease;
-}
-.tip-img {
-    height: 80px;
-    margin: 0 5px;
 }
