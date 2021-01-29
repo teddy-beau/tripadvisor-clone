@@ -4,37 +4,37 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Tripadvisor - Explorez Paris</title>
-      <script
+      <!-- <script
          src="https://kit.fontawesome.com/449fed2479.js"
          crossorigin="anonymous"
-      ></script>
+      ></script> -->
       <link rel="stylesheet" href="./assets/css/reset.css" />
       <link rel="stylesheet" href="./assets/css/font-face.css" />
       <link rel="stylesheet" href="./assets/css/style.css" />
       <link rel="stylesheet" href="./assets/css/media-queries.css" />
-
    </head>
    <body>
       <!-- Header -->
       <header class="container">
+         <i class="reveal-s icon-menu_bars"></i>
          <a href="#"
             ><img
                src="./assets/img/tripadvisor-logo.svg"
                alt="Tripadvisor logo"
          /></a>
-         <label id="search-bar" for="search-input"
-            ><i class="fas fa-search"></i
-            ><input
-               type="search"
-               id="search-input"
-               placeholder="Search..."
-         /></label>
-         <nav>
+         <i class="reveal-s icon-search"></i>
+         <div class="hide-s">
+            <label id="search-bar" for="search-input"
+               ><i class="icon-search"></i
+               ><input type="search" id="search-input" placeholder="Search..."
+            /></label>
+         </div>
+         <nav class="hide-s">
+            <a href="#"><i class="icon-plus_c"></i><span>Publier</span></a>
             <a href="#"
-               ><i class="far fa-plus-square"></i><span>Publier</span></a
+               ><i class="icon-notification_bell"></i><span>Alertes</span></a
             >
-            <a href="#"><i class="far fa-bell"></i><span>Alertes</span></a>
-            <a href="#"><i class="far fa-heart"></i><span>Voyages</span></a>
+            <a href="#"><i class="icon-heart"></i><span>Voyages</span></a>
             <button>Connectez&#8209;vous</button>
          </nav>
       </header>
@@ -44,37 +44,41 @@
          <h1><span>Explorez</span> Paris</h1>
          <nav>
             <a href="#"
-               ><span>Conseils de voyage</span><i class="far fa-flag"></i
+               ><span>Conseils de voyage</span><i class="icon-destination"></i
             ></a>
-            <a href="#"><span>Hôtels</span><i class="fas fa-bed"></i></a>
+            <a href="#"><span>Hôtels</span><i class="icon-hotels"></i></a>
             <a href="#"
-               ><span>Locations de vacances</span><i class="fas fa-key"></i
-            ></a>
-            <a href="#"
-               ><span>Activités</span><i class="fas fa-ticket-alt"></i
+               ><span>Locations de vacances</span
+               ><i class="icon-vacation_rentals"></i
             ></a>
             <a href="#"
-               ><span>Restaurants</span><i class="fas fa-utensils"></i
+               ><span>Activités</span><i class="icon-attractions"></i
             ></a>
             <a href="#"
-               ><span>Forums de voyage</span><i class="far fa-comments"></i
+               ><span>Restaurants</span><i class="icon-restaurants"></i
             ></a>
-            <a class="hidden-xl" href="#"
-            ><span>Vols</span><i class="far fa-paper-plane"></i></a>
-            <a href="#"><span>Plus</span><i class="fas fa-ellipsis-h"></i></a>
+            <a href="#"
+               ><span>Forums de voyage</span><i class="icon-forums"></i
+            ></a>
+            <a class="reveal-l" href="#"
+               ><span>Vols</span><i class="icon-flights"></i
+            ></a>
+            <a href="#"
+               ><span>Plus</span><i class="icon-more_horizontal"></i
+            ></a>
          </nav>
 
          <!-- Main: pictures -->
          <div id="img-preview">
             <button id="more-pictures-button">
-               <i class="far fa-image"></i>Toutes les photos
+               <i class="icon-photo"></i>Toutes les photos
             </button>
             <div id="img-left">
                <a href="#"
                   ><img src="./assets/img/paris1.jpg" alt="Rue de Paris"
                /></a>
             </div>
-            <div id="img-right">
+            <div class="hide-s" id="img-right">
                <a href="#"
                   ><img
                      src="./assets/img/paris2.jpg"
@@ -88,12 +92,13 @@
          <!-- Main: breadcrumbs -->
          <div id="breadcrumbs">
             <div>
-               <a href="#">Europe</a><span>></span><a href="#">France</a
-               ><span>></span><a href="#">Île-de-France</a><span>></span
+               <a href="#"><span>Europe</span></a
+               ><span>&gt;</span><a href="#"><span>France</span></a
+               ><span>&gt;</span><a href="#"><span>Île-de-France</span></a
+               ><span>&gt;</span
                ><a href="#"
-                  ><span>Paris</span
-                  ><i class="fas fa-caret-down">&nbsp;&nbsp;</i></a
-               >
+                  ><span>Paris</span><i class="icon-caret_down"></i
+               ></a>
             </div>
             <div>Visiter : Paris</div>
          </div>
@@ -182,14 +187,16 @@
                      <img
                         src="/assets/img/divertir-01.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
 
                   <h4>Tour Eiffel</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;140237 avis</span>
                   </div>
                   <div>
@@ -203,13 +210,15 @@
                      <img
                         src="/assets/img/divertir-02.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Musée du Louvre</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;100857 avis</span>
                   </div>
                   <div>Bâtiments architecturaux, Musées d'art</div>
@@ -220,13 +229,15 @@
                      <img
                         src="/assets/img/divertir-03.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Arc de Triomphe</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;45094 avis</span>
                   </div>
                   <div>Bâtiments architecturaux, Sites historiques</div>
@@ -237,13 +248,15 @@
                      <img
                         src="/assets/img/divertir-04.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Musée Rodin</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;12452 avis</span>
                   </div>
                   <div>Musées spécialisés</div>
@@ -254,13 +267,15 @@
                      <img
                         src="/assets/img/divertir-05.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Cathédrale Notre-Dame de Paris</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;71253 avis</span>
                   </div>
                   <div>Bâtiments architecturaux, Sites historiques</div>
@@ -271,13 +286,15 @@
                      <img
                         src="/assets/img/divertir-06.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Librairie Shakespeare and Company</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;3921 avis</span>
                   </div>
                   <div>Bibliothèques, Grands magasins</div>
@@ -288,13 +305,15 @@
                      <img
                         src="/assets/img/divertir-07.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Musée d'Orsay</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;65762 avis</span>
                   </div>
                   <div>Musées d'art</div>
@@ -305,13 +324,15 @@
                      <img
                         src="/assets/img/divertir-08.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Marché aux Puces de Saint-Ouen</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="far fa-circle"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_empty_refresh"></i
                      ><span class="total-ratings">&nbsp;864 avis</span>
                   </div>
                   <div>
@@ -325,13 +346,15 @@
                      <img
                         src="/assets/img/divertir-09.jpg"
                         alt="Se divertir à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Basilique du Sacré-Cœur de Montmartre</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;38627 avis</span>
                   </div>
                   <div>Églises et cathédrales</div>
@@ -352,14 +375,16 @@
                      <img
                         src="/assets/img/rest-01.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
 
                   <h4>Le Bristol Paris</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
                      ><span class="total-ratings">&nbsp;2074 avis</span>
                   </div>
                </a>
@@ -369,13 +394,15 @@
                      <img
                         src="/assets/img/rest-02.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>La Réserve Paris - Hotel and Spa</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="far fa-circle"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_empty_refresh"></i
                      ><span class="total-ratings">&nbsp;479 avis</span>
                   </div>
                </a>
@@ -385,13 +412,15 @@
                      <img
                         src="/assets/img/rest-03.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Four Seasons Hotel George V</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
                      ><span class="total-ratings">&nbsp;3065 avis</span>
                   </div>
                </a>
@@ -401,13 +430,15 @@
                      <img
                         src="/assets/img/rest-04.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Hôtel Le Crillon, A Rosewood Hotel</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;500 avis</span>
                   </div>
                </a>
@@ -427,14 +458,16 @@
                      <img
                         src="/assets/img/food-01.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
 
                   <h4>Verjus</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;574 avis</span>
                   </div>
                   <div>€€€€ • Française, Européenne, Moderne</div>
@@ -445,13 +478,15 @@
                      <img
                         src="/assets/img/food-02.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Le 114 Faubourg</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;1754 avis</span>
                   </div>
                   <div>€€€€ • Française, Européenne, Végétariens bienvenus</div>
@@ -462,13 +497,15 @@
                      <img
                         src="/assets/img/food-03.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>Frenchie</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-adjust"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_half_refresh"></i
                      ><span class="total-ratings">&nbsp;1296 avis</span>
                   </div>
                   <div>
@@ -481,13 +518,15 @@
                      <img
                         src="/assets/img/food-04.jpg"
                         alt="Se reposer à Paris"
-                     /><button><i class="far fa-heart"></i></button>
+                     /><button><i class="icon-heart"></i></button>
                   </div>
                   <h4>La Table de Colette</h4>
                   <div>
-                     <i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i><i class="fas fa-circle"></i
-                     ><i class="fas fa-circle"></i
+                     <i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
+                     ><i class="icon-bubble_rating_full_refresh"></i
                      ><span class="total-ratings">&nbsp;253 avis</span>
                   </div>
                   <div>€€€€ • Française, Européenne, Saine</div>
@@ -506,18 +545,16 @@
                /></a>
                <div class="guide-description">
                   <a class="guide-profile" href="#">
-                     
-                        <img
-                           src="./assets/img/guide-01-ico.jpg"
-                           alt="Profile picture"
-                        />
-                        <span>Par <span class="profile-link">Topito</span></span>
-                     
+                     <img
+                        src="./assets/img/guide-01-ico.jpg"
+                        alt="Profile picture"
+                     />
+                     <span>Par <span class="profile-link">Topito</span></span>
                   </a>
                   <a href="#">
                      <h4>Les 10 monuments et musées de Paris à faire.</h4>
                      <p>Guide du vrai touriste à Paris.</p>
-                     <i class="fas fa-heart"></i>
+                     <i class="icon-heart_fill"></i>
                      <div>10 articles</div>
                   </a>
                </div>
@@ -529,17 +566,20 @@
                /></a>
                <div class="guide-description">
                   <a class="guide-profile" href="#">
-                     
-                        <img
-                           src="./assets/img/guide-02-ico.jpg"
-                           alt="Profile picture"
-                        />
-                        <span>Par <span class="profile-link">Eatwith</span></span>
+                     <img
+                        src="./assets/img/guide-02-ico.jpg"
+                        alt="Profile picture"
+                     />
+                     <span>Par <span class="profile-link">Eatwith</span></span>
                   </a>
                   <a href="#">
                      <h4>Best summer things to do in Paris | Eatwith</h4>
-                     <p>Eatwith host Elodie is a private tour guide in Paris, offering all sorts of tours for small groups, from fashion to food...</p>
-                     <i class="fas fa-heart"></i>
+                     <p>
+                        Eatwith host Elodie is a private tour guide in Paris,
+                        offering all sorts of tours for small groups, from
+                        fashion to food...
+                     </p>
+                     <i class="icon-heart_fill"></i>
                      <div>36 articles</div>
                   </a>
                </div>
@@ -551,22 +591,24 @@
                /></a>
                <div class="guide-description">
                   <a class="guide-profile" href="#">
-                     
-                        <img
-                           src="./assets/img/guide-03-ico.jpg"
-                           alt="Profile picture"
-                        />
-                        <span>Par <span class="profile-link">Topito</span></span>
-                     
+                     <img
+                        src="./assets/img/guide-03-ico.jpg"
+                        alt="Profile picture"
+                     />
+                     <span>Par <span class="profile-link">Topito</span></span>
                   </a>
                   <a href="#">
                      <h4>Top 10 des choses à faire ou à voir dans le 14ème</h4>
-                     <p>Les Catacombes De Paris, Parc Montsouris, Le Tournesol cafe, Fondation Cartier pour l'art contemporain...</p>
-                     <i class="fas fa-heart"></i>
+                     <p>
+                        Les Catacombes De Paris, Parc Montsouris, Le Tournesol
+                        cafe, Fondation Cartier pour l'art contemporain...
+                     </p>
+                     <i class="icon-heart_fill"></i>
                      <div>10 articles</div>
                   </a>
                </div>
             </div>
+         </div>
       </section>
 
       <!-- Section: travel tips #4 -->

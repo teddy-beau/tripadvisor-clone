@@ -8,7 +8,7 @@
       width: 95%;
       margin: 0 auto;
    }
-   .hidden-xl {
+   .reveal-l {
       display: inherit;
    }
    /* Header */
@@ -44,10 +44,17 @@
       padding: 0 3%;
    }
    /* Section: travel tips #2 */
+   .card {
+      width: calc(100% / 3 - 16px);
+   }
    .card img {
       height: 180px;
    }
    /* Footer */
+   #footer-container {
+      width: 95%;
+      margin: 0 auto;
+   }
    footer #footer-right {
       flex-direction: column;
    }
@@ -58,9 +65,7 @@
 
 /* Medium devices (tablets, below 1024) */
 @media (max-width: 1024px) {
-   body {
-      background-color: rgb(217, 230, 235);
-   }
+   /* Nav */
    header nav {
       margin-left: auto;
    }
@@ -76,17 +81,169 @@
    header nav a > i {
       margin-right: 0px;
    }
+   /* Main nav */
    main nav a {
       width: 15%;
    }
+   /* Pictures */
    main #img-preview {
       height: 300px;
+   }
+   /* Info block */
+   main #info-block {
+      flex-direction: column;
+   }
+   main #info-left {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+   main #info-right {
+      width: 100%;
+      flex-direction: row;
+   }
+   main #info-right div:first-child {
+      border-radius: 10px 0 0 10px;
+      height: 290px;
+      width: 50%;
+      box-sizing: border-box;
+   }
+   main #info-right img {
+      border-radius: 0 10px 10px 0;
+      height: 290px;
+      width: 50%;
+   }
+   /* Section: travel tips #1 */
+   #main-tips {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 16px;
+   }
+   /* Section: travel tips #2 */
+   .slider-legend {
+      width: calc(100% / 3);
+   }
+   .slider-cards {
+      width: calc((100% / 3) * 2);
+   }
+   .card {
+      width: calc(100% / 2 - 16px);
+   }
+   /* Footer */
+   #footer-container {
+      width: 95%;
+      margin: 0 auto;
+      flex-direction: column-reverse;
+   }
+   footer #footer-right {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+   footer #footer-right input {
+      margin-bottom: 24px;
+      margin-left: 0;
+      width: 40%;
    }
 }
 
 /* Small devices (landscape phones, below 576px) */
 @media (max-width: 768px) {
-   body {
-      background-color: rgb(198, 236, 198);
+   .reveal-s {
+      display: inherit;
+   }
+   .hide-s {
+      display: none;
+   }
+   /* Header  */
+   header img {
+      height: 32px;
+      margin-right: 0px;
+   }
+   header > i {
+      font-size: 24px;
+   }
+   /* Main */
+   main h1 {
+      font-size: 7vw;
+   }
+   main nav {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: scroll;
+   }
+   main nav a {
+      flex: none;
+      margin-bottom: 8px;
+      width: 33%;
+   }
+   main nav a:not(:last-child) {
+      margin-right: 16px;
+   }
+   /* Pictures */
+   main #img-preview {
+      /* width: 105%; */
+      margin: 0 calc(-5% / 2);
+      height: 250px;
+   }
+   main #img-left img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0;
+      box-sizing: border-box;
+   }
+   /* Info block */
+   main #info-left {
+      width: 100%;
+   }
+   #info-left p {
+      font-size: 16px;
+   }
+   #info-left h2 {
+      font-size: 28px;
+   }
+   main #info-right {
+      width: 100%;
+      flex-direction: column;
+   }
+   main #info-right div:first-child {
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+   }
+   main #info-right img {
+      border-radius: 0 0 10px 10px;
+      height: 150px;
+      object-fit: cover;
+      width: 100%;
+   }
+   /* Main tips */
+   #main-tips {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-row-gap: 16px;
+   }
+   /* Slider cards */
+   .slider-activities {
+      flex-direction: column;
+   }
+   .slider-legend {
+      width: 100%;
+   }
+   .slider-cards {
+      width: 100%;
+   }
+   .card {
+      width: 100%;
+      margin: 2;
+   }
+   /* Guides */
+   #guides-section {
+      /* width: 100%; */
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: scroll;
+   }
+   .guide {
+      flex: none;
+      width: 100%;
    }
 }
