@@ -1,0 +1,92 @@
+/* RESPONSIVE */
+
+/* Default: extra large devices (large desktops, 1328px and up) */
+
+/* Large devices (desktops, below 1328px) */
+@media (max-width: 1328px) {
+   .container {
+      width: 95%;
+      margin: 0 auto;
+   }
+   .hidden-xl {
+      display: inherit;
+   }
+   /* Header */
+   header #search-bar {
+      max-width: 350px;
+   }
+   header nav {
+      margin-left: 30px;
+   }
+   /* Nav */
+   main nav {
+      flex-wrap: wrap;
+   }
+   main nav a {
+      min-width: calc((100% / 4) - (48px / 4));
+      margin-bottom: 16px;
+   }
+   main nav a:not(:last-child) {
+      margin-right: 0;
+   }
+   main nav a:not(:nth-child(4n)) {
+      margin-right: 16px;
+   }
+   main nav a i {
+      margin-left: 10px;
+   }
+   /* Image preview */
+   main #img-preview {
+      height: 380px;
+   }
+   /* Section: travel tips #1 */
+   #main-tips .item {
+      padding: 0 3%;
+   }
+   /* Section: travel tips #2 */
+   .card img {
+      height: 180px;
+   }
+   /* Footer */
+   footer #footer-right {
+      flex-direction: column;
+   }
+   footer #footer-right input {
+      margin-bottom: 12px;
+   }
+}
+
+/* Medium devices (tablets, below 1024) */
+@media (max-width: 1024px) {
+   body {
+      background-color: rgb(217, 230, 235);
+   }
+   header nav {
+      margin-left: auto;
+   }
+   header #search-bar {
+      width: auto;
+   }
+   header nav a {
+      padding: 8px 10px;
+   }
+   header nav a span {
+      display: none;
+   }
+   header nav a > i {
+      margin-right: 0px;
+   }
+   main nav a {
+      width: 15%;
+   }
+   main #img-preview {
+      height: 300px;
+   }
+}
+
+/* Small devices (landscape phones, below 576px) */
+@media (max-width: 768px) {
+   body {
+      background-color: rgb(198, 236, 198);
+   }
+}
