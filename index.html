@@ -4,14 +4,14 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Tripadvisor - Explorez Paris</title>
-      <!-- <script
-         src="https://kit.fontawesome.com/449fed2479.js"
-         crossorigin="anonymous"
-      ></script> -->
+      <script src="./assets/js/main.js"></script>
+      <!-- Import d'axios : -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <link rel="stylesheet" href="./assets/css/reset.css" />
       <link rel="stylesheet" href="./assets/css/font-face.css" />
       <link rel="stylesheet" href="./assets/css/style.css" />
       <link rel="stylesheet" href="./assets/css/media-queries.css" />
+      <link rel="icon" href="./assets/img/favicon-tripadvisor.svg" />
    </head>
    <body>
       <!-- Header -->
@@ -35,7 +35,7 @@
                ><i class="icon-notification_bell"></i><span>Alertes</span></a
             >
             <a href="#"><i class="icon-heart"></i><span>Voyages</span></a>
-            <button>Connectez&#8209;vous</button>
+            <button id="log-in-button">Connectez&#8209;vous</button>
          </nav>
       </header>
 
@@ -666,5 +666,50 @@
             </div>
          </div>
       </footer>
+      <div class="form-container display">
+         <form id="contact-form" method="post" action="#">
+            <div>
+               <h2>Contactez-nous</h2>
+               <i id="close-form" class="icon-times"></i>
+            </div>
+            <input
+               type="text"
+               name="firstname"
+               id="firstname"
+               value=""
+               placeholder="Votre prénom"
+            /><br />
+            <input
+               type="text"
+               name="lastname"
+               id="lastname"
+               value=""
+               placeholder="Votre nom"
+            /><br />
+            <input
+               type="email"
+               name="email"
+               id="email"
+               value=""
+               placeholder="Votre email"
+            /><br />
+            <input
+               type="text"
+               name="subject"
+               id="subject"
+               value=""
+               placeholder="De quoi voulez-vous me parler ?"
+            /><br />
+            <textarea
+               name="message"
+               id="message"
+               cols="30"
+               rows="10"
+               placeholder="Votre message..."
+            ></textarea
+            ><br />
+            <button type="submit">Envoyer</button>
+         </form>
+      </div>
    </body>
 </html>
