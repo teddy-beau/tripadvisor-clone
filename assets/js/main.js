@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
          };
          console.log("this is the data object: ", data);
          // HTTP POST request to send the data to the backend
-         const response = await axios.post("http://localhost:3000", data);
+         const response = await axios.post(
+            "https://tripadvisor-clone-back.herokuapp.com/",
+            data
+         );
          console.log("this is the response from axios: ", response);
       });
 });
