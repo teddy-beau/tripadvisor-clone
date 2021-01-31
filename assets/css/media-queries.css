@@ -128,6 +128,12 @@
    .card {
       width: calc(100% / 2 - 16px);
    }
+   /* Section: travel tips #4 */
+   .forum-thread > div > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+   }
    /* Footer */
    #footer-container {
       width: 95%;
@@ -146,6 +152,7 @@
    .form-container form {
       padding: 30px 40px 40px 40px;
       width: 40%;
+   }
 }
 
 /* Small devices (landscape phones, below 576px) */
@@ -183,7 +190,6 @@
    }
    /* Pictures */
    main #img-preview {
-      /* width: 105%; */
       margin: 0 calc(-5% / 2);
       height: 250px;
    }
@@ -253,5 +259,15 @@
       width: 100%;
       height: 100%;
       margin-top: 70px;
+   }
+   /* Forum */
+   #forum-highlights {
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: scroll;
+   }
+   .forum-thread {
+      width: 70%;
+      flex: none;
    }
 }
