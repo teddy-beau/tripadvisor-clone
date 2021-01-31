@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // OPEN/CLOSE FORM
    document.querySelector("#log-in-button").addEventListener("click", () => {
-      document.querySelector(".form-container").classList.remove("display");
+      document.querySelector(".form-container").classList.remove("hide");
    });
-   document.querySelector("#close-form").addEventListener("click", () => {
-      document.querySelector(".form-container").classList.add("display");
+   document.querySelector(".close-form").addEventListener("click", () => {
+      document.querySelector(".form-container").classList.add("hide");
    });
 
    // PROCESSING FORM SUBMISSIONS
@@ -30,4 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
          );
          console.log("this is the response from axios: ", response);
       });
+
+   // FORM THANK YOU MESSAGE
+   document.querySelector("#contact-form").addEventListener("submit", () => {
+      document.querySelector(".before-submission").classList.add("hide");
+      document.querySelector(".after-submission").classList.remove("hide");
+   });
 });

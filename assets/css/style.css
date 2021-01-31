@@ -647,21 +647,27 @@ footer p {
    font-size: 24px;
    cursor: pointer;
 }
-.form-container form input,
-.form-container form textarea,
-.form-container form button {
+.form-container input,
+.form-container textarea,
+.form-container button {
    border: none;
    color: #000000;
    font-family: inherit;
    font-size: inherit;
+   line-height: normal;
    padding: 10px;
+}
+.form-container p {
+   font-weight: 900;
+   text-align: center;
+   font-size: 18px;
+   margin-top: 30px;
 }
 .form-container form:first-child h2 {
    font-weight: 900;
    font-size: 28px;
    line-height: normal;
 }
-
 .form-container form button {
    background-color: #000000;
    color: #faf1ed;
@@ -670,6 +676,7 @@ footer p {
    align-self: center;
    cursor: pointer;
 }
-.display {
+
+.hide {
    display: none;
 }

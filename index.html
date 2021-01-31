@@ -35,7 +35,8 @@
                ><i class="icon-notification_bell"></i><span>Alertes</span></a
             >
             <a href="#"><i class="icon-heart"></i><span>Voyages</span></a>
-            <button id="log-in-button">Connectez&#8209;vous</button>
+            <!-- <button id="log-in-button">Connectez&#8209;vous</button> -->
+            <button id="log-in-button">Contactez&#8209;nous</button>
          </nav>
       </header>
 
@@ -612,22 +613,22 @@
       </section>
 
       <!-- Section: travel tips #4 -->
-      <section class="container tips-section">
+      <!-- <section class="container tips-section">
          <div id="forum-img">
             <img src="./assets/img/before-forum.svg" alt="Forums Tripadvisor" />
          </div>
          <h2 id="forum-h2"><span>Dans les forums</span></h2>
-      </section>
+      </section> -->
       <!-- Section: travel tips #5 -->
-      <section class="container tips-section">
+      <!-- <section class="container tips-section">
          <h2>
             <span>Louez un logement pour votre prochaine escapade</span>
          </h2>
-      </section>
+      </section> -->
       <!-- Section: travel tips #6 -->
-      <section class="container tips-section">
+      <!-- <section class="container tips-section">
          <h2><span>Paris est géniale pour</span></h2>
-      </section>
+      </section> -->
       <!-- Footer -->
       <footer>
          <div id="footer-container">
@@ -666,11 +667,11 @@
             </div>
          </div>
       </footer>
-      <div class="form-container display">
+      <div class="form-container hide">
          <form id="contact-form" method="post" action="#">
             <div>
                <h2>Contactez-nous</h2>
-               <i id="close-form" class="icon-times"></i>
+               <i class="icon-times close-form"></i>
             </div>
             <input
                type="text"
@@ -678,6 +679,7 @@
                id="firstname"
                value=""
                placeholder="Votre prénom"
+               required
             /><br />
             <input
                type="text"
@@ -685,6 +687,7 @@
                id="lastname"
                value=""
                placeholder="Votre nom"
+               required
             /><br />
             <input
                type="email"
@@ -692,6 +695,7 @@
                id="email"
                value=""
                placeholder="Votre email"
+               required
             /><br />
             <input
                type="text"
@@ -699,6 +703,7 @@
                id="subject"
                value=""
                placeholder="De quoi voulez-vous me parler ?"
+               required
             /><br />
             <textarea
                name="message"
@@ -706,9 +711,13 @@
                cols="30"
                rows="10"
                placeholder="Votre message..."
+               required
             ></textarea
             ><br />
             <button type="submit">Envoyer</button>
+            <p class="thank you hide">
+               Merci, votre message a bien été envoyé&nbsp;!
+            </p>
          </form>
       </div>
    </body>
